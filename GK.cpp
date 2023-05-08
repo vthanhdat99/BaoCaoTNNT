@@ -31,7 +31,7 @@ int checkNumberColor() {
 }
 int change = 0;
 void graphColoring(int k) {
-	int nF=0;
+	int nF = 0;
 	int s = arrSorted[k];
 	if (k == n + 1) {
 		int ch = checkNumberColor();
@@ -42,7 +42,7 @@ void graphColoring(int k) {
 		}
 		return;
 	}
-
+	if(MIN == deg[arrSorted[n]]) return;
 	for (int i = 0; i <= maxNum; i++) {
 		if (change != 0) {
 			if (find(g[s].begin(), g[s].end(), change) != g[s].end()) {
