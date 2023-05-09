@@ -54,7 +54,7 @@ int H() {
 		}
 	}
 	for (int i = 1; i <= siz; i++) {
-		int u = vec[i - 1].first;
+		int u = vec[i].first;
 		int px = value[i];
 		nD[u][px]++;
 	}
@@ -63,8 +63,6 @@ int H() {
 		for (int j = 1; j <= p; j++) {
 			if (D[i][j] == 1) {
 				ans += (nD[i][j] != 1) ? abs(nD[i][j] - 1) * -1 * cnt3 : cnt3;
-				if (nD[i][j] != 1) {
-				}
 			}
 		}
 	}
